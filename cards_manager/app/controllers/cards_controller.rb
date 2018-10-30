@@ -5,6 +5,7 @@ class CardsController < ApplicationController
   # GET /cards
   # GET /cards.json
   def index
+    # ユーザごと表示を切り替える。
     @cards = Card.where(user_id: current_user.id)
   end
 
